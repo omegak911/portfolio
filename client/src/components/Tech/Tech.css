@@ -1,0 +1,16 @@
+.tech {
+  border: 1px solid orange;
+  margin-bottom: 10px;
+  height: 50px;
+  min-width: 250px;
+}
+
+.techContainer1, 
+.techContainer2 {
+  margin-top: 20px;
+  margin-right: 50px;
+}
+
+.techContainerTop {
+  display: flex;
+}
