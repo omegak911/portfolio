@@ -7,7 +7,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js[x]?/,
         exclude: /node_modules/,
@@ -15,7 +15,11 @@ module.exports = {
         options: {
           presets: ['react', 'env']
         }
-      }
+      },
+      {
+        test: /\.(scss|css)$/,
+        loaders: ['style-loader', 'css-loader', 'sass-loader'],
+      },
     ]
   },
   resolve: {
