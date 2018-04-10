@@ -12,16 +12,19 @@ class Navbar extends Component {
     return (
       <div className="navMain">
         <div className="navTab">
-          <Link to={'Projects'}>Projects</Link>
+          <Link to={'/'}>Home</Link>
         </div>
         <div className="navTab">
-          <Link to={'Contact'}>Contact</Link>
+          <Link to={'Tech'}>Tech Stack</Link>
+        </div>
+        <div className="navTab">
+          <Link to={'Projects'}>Projects</Link>
         </div>
         <div className="navTab">
           <Link to={'About'}>About</Link>
         </div>
         <div className="navTab">
-          <Link to={'/'}>Home</Link>
+          <Link to={'Contact'}>Contact</Link>
         </div>
       </div>
     )

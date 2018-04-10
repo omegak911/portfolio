@@ -1,15 +1,15 @@
 .navMain {
   border: 1px solid blue;
   height: 30px;
+  display: flex;
 }
 
 .navTab {
   border: 1px solid green;
-  float: right;
   text-align: center;
   min-width: 50px;
   min-height: 20px;
-  height: 25px;
+  height: 100%;
   width: 20%;
 
 }

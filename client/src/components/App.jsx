@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { Route, BrowserRouter, Switch } from 'react-router-dom';
 
-import About from './About';
-import Contact from './Contact';
+import About from './About/About';
+import Contact from './Contact/Contact';
 import Home from './Home/Home';
 import Navbar from './Navigation/Navbar';
 import Projects from './Projects';
+import Tech from './Tech/Tech';
 
 class App extends Component {
   constructor(props) {
@@ -20,10 +21,11 @@ class App extends Component {
           <div>
             <Navbar />
             <Switch>
-              <Route exact={true} path='/' component={Home}/>
-              <Route path='/About' component={About}/>
-              <Route path='/Contact' component={Contact}/>
-              <Route path='/Projects' component={Projects}/>
+              <Route exact={true} path='/' component={Home} />
+              <Route path='/About' component={About} />
+              <Route path='/Contact' component={Contact} />
+              <Route path='/Projects' component={Projects} />
+              <Route path='/Tech' component={Tech} />
             </Switch>
           </div>
         </BrowserRouter>      
