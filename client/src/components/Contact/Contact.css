@@ -1,0 +1,33 @@
+input {
+  display: block;
+  width: 400px;
+  height: 30px;
+}
+
+.contactForm {
+  position: absolute;
+  left: 40%;
+  top: 40%;
+}
+
+.contactForm input {
+  margin-bottom: 5px;
+}
+
+.contactForm textarea {
+  height: 150px;
+  width: 400px;
+}
+
+.contactInstructions {
+  display: block;
+  position: absolute;
+  top: 30%;
+  left: 52%;
+}
+
+.contactMain {
+  min-height: 600px;
+  position: relative;
+  text-align: center;
+}
