@@ -1,0 +1,21 @@
+
+.homeMain {
+  border: 1px solid red;
+  min-height: 700px;
+  position: relative;
+}
+
+.name {
+  font-size: 40px;
+  margin-left: 45%;
+  top: 40%;
+  position: absolute;
+}
+
+.statement {
+  font-size: 30px;
+  margin-left: 25%;
+  top: 50%;
+  position: absolute;
+  text-align: center;
+}
