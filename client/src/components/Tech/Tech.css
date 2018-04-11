@@ -5,6 +5,10 @@
   min-width: 250px;
 }
 
+.techContainer1 {
+  margin-left: 50px;
+}
+
 .techContainer1, 
 .techContainer2 {
   margin-top: 20px;
@@ -13,4 +17,5 @@
 
 .techContainerTop {
   display: flex;
+  justify-content: center;
 }
