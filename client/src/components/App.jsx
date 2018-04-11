@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route, BrowserRouter, Switch } from 'react-router-dom';
 
-import About from './About/About';
+import Blog from './Blog/Blog';
 import Contact from './Contact/Contact';
 import Home from './Home/Home';
 import Navbar from './Navigation/Navbar';
@@ -16,13 +16,12 @@ class App extends Component {
   render() {
     return (
       <div>
-        Hello from App
         <BrowserRouter>
           <div>
             <Navbar />
             <Switch>
               <Route exact={true} path='/' component={Home} />
-              <Route path='/About' component={About} />
+              <Route path='/Blog' component={Blog} />
               <Route path='/Contact' component={Contact} />
               <Route path='/Projects' component={Projects} />
               <Route path='/Tech' component={Tech} />
