@@ -54,7 +54,7 @@ export default class Tech extends Component {
               <div className="techContainerInner">
                 <div className="tech">
                   {tech.tech}
-                  {tech.rating}
+                  <Stars solidStars={tech.rating}/>
                 </div>
               </div>
             )}
@@ -64,7 +64,7 @@ export default class Tech extends Component {
               <div className="techContainerInner">
                 <div className="tech">
                   {tech.tech}
-                  {tech.rating}
+                  <Stars solidStars={tech.rating}/>
                 </div>
               </div>
             )}
@@ -74,7 +74,7 @@ export default class Tech extends Component {
               <div className="techContainerInner">
                 <div className="tech">
                   {tech.tech}
-                  {tech.rating}
+                  <Stars solidStars={tech.rating}/>
                 </div>
               </div>
             )}
@@ -84,7 +84,7 @@ export default class Tech extends Component {
               <div className="techContainerInner">
                 <div className="tech">
                   {tech.tech}
-                  {tech.rating}
+                  <Stars solidStars={tech.rating}/>
                 </div>
               </div>
             )}
