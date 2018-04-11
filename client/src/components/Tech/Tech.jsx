@@ -8,91 +8,87 @@ export default class Tech extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      techStack: [
-        ['Javascript', 5],
-        ['Node.js', 5],
-        ['Express', 5],
-        ['React', 5],
-        ['Socket.IO', 5],
-        ['HTML5', 5],
-        ['CSS3', 5],
-        ['React Redux', 4],
-        ['MySQL', 4],
-        ['PostgreSQL', 4],
-        ['MongoDB', 4],
-        ['Express', 4],
-        ['jQuery', 4],
-        ['RESTful API', 4],
-        ['React Native', 3],
-      ]
+      frontEnd: [
+        { tech: 'Javascript', rating: 5 },
+        { tech: 'React', rating: 5 },
+        { tech: 'Socket.IO', rating: 5 },
+        { tech: 'HTML5', rating: 5 },
+        { tech: 'CSS3', rating: 5 },
+        { tech: 'React Router', rating: 5 },
+        { tech: 'React Redux', rating: 4 },
+        { tech: 'jQuery', rating: 4 },
+        { tech: 'React Native', rating: 3 },
+      ],
+      backEnd: [
+        { tech: 'Node.js', rating: 5 },
+        { tech: 'Express', rating: 5 },
+        { tech: 'MySQL', rating: 4 },
+        { tech: 'PostgreSQL', rating: 4 },
+        { tech: 'MongoDB', rating: 4 },
+        { tech: 'RESTful API', rating: 4 },
+        { tech: 'BCrypt', rating: 3 },
+        { tech: 'Passport', rating: 0 },
+      ],
+      deployment: [
+        { tech: 'AWS', rating: 1 },
+        { tech: 'Nginx', rating: 0 },
+      ],
+      devTools: [
+        { tech: 'Git', rating: 4 },
+        { tech: 'NPM', rating: 3 },
+        { tech: 'Webpack', rating: 3 },
+        { tech: 'Babel', rating: 2 },
+        { tech: 'Yarn', rating: 2 },
+      ],
     }
   }
 
   render() {
-    const { contain1 } = this.state;
+    const { frontEnd, backEnd, deployment, devTools } = this.state;
 
     return (
       <div className="techMain">
         <div className="techContainerTop">
-          <div className="techContainer">
-            {techStack.map((tech, index) => {
-              <div className="techContainer1">
+          <div className="techContainerMiddle">
+            {frontEnd.map((tech, index) => 
+              <div className="techContainerInner">
                 <div className="tech">
-                  {}
+                  {tech.tech}
+                  {tech.rating}
                 </div>
               </div>
-              })}
+            )}
           </div>
-          {/* <div className="techContainer1">
-            <div className="tech">
-              Javascript
-            </div>
-            <div className="tech">
-              Node.js
-              <Stars />
-            </div>
-            <div className="tech">
-              Express.js
-            </div>
-            <div className="tech">
-              React
-            </div>
-            <div className="tech">
-              React Native
-            </div>
-            <div className="tech">
-              React Redux
-            </div>
-            <div className="tech">
-              MySQL
-            </div>
-            <div className="tech">
-              PostgreSQL
-            </div>
-            <div className="tech">
-              HTML5
-            </div>
+          <div className="techContainerMiddle">
+            {backEnd.map((tech, index) =>
+              <div className="techContainerInner">
+                <div className="tech">
+                  {tech.tech}
+                  {tech.rating}
+                </div>
+              </div>
+            )}
           </div>
-          <div className="techContainer2">
-            <div className="tech">
-              CSS3
-            </div>
-            <div className="tech">
-              MongoDB
-            </div>
-            <div className="tech">
-              Express
-            </div>
-            <div className="tech">
-              RESTful API
-            </div>
-            <div className="tech">
-              Socket.IO
-            </div>
-            <div className="tech">
-              jQuery
-            </div>
-          </div> */}
+          <div className="techContainerMiddle">
+            {deployment.map((tech, index) =>
+              <div className="techContainerInner">
+                <div className="tech">
+                  {tech.tech}
+                  {tech.rating}
+                </div>
+              </div>
+            )}
+          </div>
+          <div className="techContainerMiddle">
+            {devTools.map((tech, index) =>
+              <div className="techContainerInner">
+                <div className="tech">
+                  {tech.tech}
+                  {tech.rating}
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     )

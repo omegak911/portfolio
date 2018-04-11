@@ -5,14 +5,9 @@
   min-width: 250px;
 }
 
-.techContainer1 {
+.techContainerMiddle {
   margin-left: 50px;
-}
-
-.techContainer1, 
-.techContainer2 {
-  margin-top: 20px;
-  margin-right: 50px;
+  border: 1px solid black;
 }
 
 .techContainerTop {
