@@ -52,7 +52,7 @@ export default class Tech extends Component {
           <div className="techContainerMiddle">
             <div className="category">FRONTEND</div>
             {frontEnd.map((tech, index) => 
-              <div className="techContainerInner">
+              <div key={index} className="techContainerInner">
                 <div className="tech">
                   {tech.tech}
                   <Stars solidStars={tech.rating}/>
@@ -63,7 +63,7 @@ export default class Tech extends Component {
           <div className="techContainerMiddle">
             <div className="category">BACKEND</div>
             {backEnd.map((tech, index) =>
-              <div className="techContainerInner">
+              <div key={index+10} className="techContainerInner">
                 <div className="tech">
                   {tech.tech}
                   <Stars solidStars={tech.rating}/>
@@ -74,7 +74,7 @@ export default class Tech extends Component {
           <div className="techContainerMiddle">
             <div className="category">DEPLOYMENT</div>
             {deployment.map((tech, index) =>
-              <div className="techContainerInner">
+              <div key={index+20} className="techContainerInner">
                 <div className="tech">
                   {tech.tech}
                   <Stars solidStars={tech.rating}/>
@@ -85,7 +85,7 @@ export default class Tech extends Component {
           <div className="techContainerMiddle last">
             <div className="category">DEVTOOLS</div>
             {devTools.map((tech, index) =>
-              <div className="techContainerInner">
+              <div key={index+30} className="techContainerInner">
                 <div className="tech">
                   {tech.tech}
                   <Stars solidStars={tech.rating}/>
