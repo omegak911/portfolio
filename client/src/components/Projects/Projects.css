@@ -1,0 +1,28 @@
+.projectsMain {
+  display: flex;
+  flex-direction: row;
+}
+
+.rediditContainer {
+  max-width: 800px;
+}
+
+.rhymeDrContainer {
+  max-width: 400px;
+}
+
+.rediditContainer,
+.rhymeDrContainer {
+  text-align: center;
+}
+
+.rediditContainer img {
+  transform: scale(0.9);
+  margin-bottom: -20px;
+}
+
+.rhymeDrContainer img {
+  transform: scale(0.8);
+  margin-top: -50px;
+  margin-bottom: -50px;
+}

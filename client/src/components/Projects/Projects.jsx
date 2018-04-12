@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
 
+import './Projects.css';
+
+const redidit = 'https://media.licdn.com/media-proxy/ext?w=800&h=800&f=n&hash=7%2Ft8PyKhFJmmc360e9k3D7AlwGs%3D&ora=1%2CaFBCTXdkRmpGL2lvQUFBPQ%2CxAVta5g-0R6jnhodx1Ey9KGTqAGj6E5DQJHUA3L0CHH05IbfPWjucZTZeeCl9UARcH0DjQAwKr61ETPnQY6-KIO7etkkgpPndZH5agYUbhl4lWdI';
+const rhymeDr = 'https://media.licdn.com/media-proxy/ext?w=800&h=800&f=n&hash=IPlKHIIm9lFrnbt8npUC243t14s%3D&ora=1%2CaFBCTXdkRmpGL2lvQUFBPQ%2CxAVta5g-0R6jnhodx1Ey9KGTqAGj6E5DQJHUA3L0CHH05IbfPWjhfsCLerbzrUBHcS8HjQAxKum1SGG3E464KojnKN0j2Ze3JMT5agYUbhl4lWdI';
+
 class Projects extends Component {
   constructor(props) {
     super(props)
@@ -7,10 +12,11 @@ class Projects extends Component {
 
   render() {
     return (
-      <div>Projects
+      <div className="projectsMain">
       
-      <div>
-        <img src={'./images/RhymeDoctor.png'} height="100" width="100" alt="rhymeDoctor"/>
+      <div className="rhymeDrContainer">
+        <img src={rhymeDr} alt="rhymeDoctor"/>
+        <br/>
         <span>
           Rhyme Doctor - Social media app for reading rap lyrics submitted 
           by users from RhymeDoctor.fun. Add friends, follow friends' posts, 
@@ -19,8 +25,9 @@ class Projects extends Component {
           Posting available on RhymeDoctor.fun
         </span>
       </div>
-      <div>
-        <img src="/images/Redidit.png" height="100" width="100" alt="redidit"/>
+      <div className="rediditContainer">
+        <img src={redidit} alt="redidit"/>
+        <br/>
         <span>
           Redidit - Clone of Reddit
         </span>
