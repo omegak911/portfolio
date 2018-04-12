@@ -6,11 +6,16 @@
 }
 
 .techContainerMiddle {
-  margin-left: 50px;
+  margin-right: 30px;
   border: 1px solid black;
+}
+
+.techContainerMiddle.last {
+  margin-right: 0px;
 }
 
 .techContainerTop {
   display: flex;
   justify-content: center;
+  margin-top: 20px;
 }

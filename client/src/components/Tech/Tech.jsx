@@ -50,6 +50,7 @@ export default class Tech extends Component {
       <div className="techMain">
         <div className="techContainerTop">
           <div className="techContainerMiddle">
+            <div className="category">FRONTEND</div>
             {frontEnd.map((tech, index) => 
               <div className="techContainerInner">
                 <div className="tech">
@@ -60,6 +61,7 @@ export default class Tech extends Component {
             )}
           </div>
           <div className="techContainerMiddle">
+            <div className="category">BACKEND</div>
             {backEnd.map((tech, index) =>
               <div className="techContainerInner">
                 <div className="tech">
@@ -70,6 +72,7 @@ export default class Tech extends Component {
             )}
           </div>
           <div className="techContainerMiddle">
+            <div className="category">DEPLOYMENT</div>
             {deployment.map((tech, index) =>
               <div className="techContainerInner">
                 <div className="tech">
@@ -79,7 +82,8 @@ export default class Tech extends Component {
               </div>
             )}
           </div>
-          <div className="techContainerMiddle">
+          <div className="techContainerMiddle last">
+            <div className="category">DEVTOOLS</div>
             {devTools.map((tech, index) =>
               <div className="techContainerInner">
                 <div className="tech">
