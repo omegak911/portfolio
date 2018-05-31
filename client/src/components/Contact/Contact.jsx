@@ -13,7 +13,8 @@ class Contact extends Component {
 
   render() {
     return (
-      <div id="contact">
+      <div id="contact" className="topContainer">
+        <h2>Contact</h2>
         <div className="contactInstructions">
           Let's chat!
 

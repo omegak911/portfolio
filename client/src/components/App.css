@@ -2,10 +2,18 @@ body {
   margin: 0;
 }
 
+h2 {
+  padding-top: 50px;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 html, body {
   height: 100%;
+}
+
+.topContainer {
+  min-height: 100vh;
 }
