@@ -1,12 +1,16 @@
-html, body {
-  height: 100%;
-}
-.homeMain {
-  border: 1px solid red;
-  min-height: 700px;
+#home {
+  background-image: url("https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-138815.jpg");
+  background-position-x: 50%;
+  background-size: cover;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+#home span {
+  color: white;
+  text-shadow: 5px 5px 10px black;
 }
 
 .name {
