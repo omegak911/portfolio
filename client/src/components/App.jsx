@@ -8,6 +8,8 @@ import Navbar from './Navigation/Navbar';
 import Projects from './Projects/Projects';
 import Tech from './Tech/Tech';
 
+import './App.css';
+
 class App extends Component {
   constructor(props) {
     super(props)
@@ -16,18 +18,12 @@ class App extends Component {
   render() {
     return (
       <div>
-        <BrowserRouter>
-          <div>
-            <Navbar />
-            <Switch>
-              <Route exact={true} path='/' component={Home} />
-              <Route path='/Blog' component={Blog} />
-              <Route path='/Contact' component={Contact} />
-              <Route path='/Projects' component={Projects} />
-              <Route path='/Tech' component={Tech} />
-            </Switch>
-          </div>
-        </BrowserRouter>      
+        <Navbar />
+        <Home />
+        <Projects />
+        <Tech />
+        <Blog />
+        <Contact />
       </div>
 
     )
