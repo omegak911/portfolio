@@ -13,7 +13,7 @@ class Contact extends Component {
 
   render() {
     return (
-      <div className="contactMain">
+      <div id="contact">
         <div className="contactInstructions">
           Let's chat!
 

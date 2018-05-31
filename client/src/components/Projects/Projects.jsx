@@ -12,31 +12,25 @@ class Projects extends Component {
 
   render() {
     return (
-      <div className="projectsMain">
-      
-      <div className="rhymeDrContainer">
-        <img src={rhymeDr} alt="rhymeDoctor"/>
-        <br/>
-        <span>
-          Rhyme Doctor - Social media app for reading rap lyrics submitted 
-          by users from RhymeDoctor.fun. Add friends, follow friends' posts, 
-          chat, like rap posts, and comment on popular user-made rap lyrics.
+      <div id="project">
+        <div className="rhymeDrContainer">
+          <img src={rhymeDr} alt="rhymeDoctor"/>
+          <br/>
+          <span>
+            Rhyme Doctor - Social media app for reading rap lyrics submitted 
+            by users from RhymeDoctor.fun. Add friends, follow friends' posts, 
+            chat, like rap posts, and comment on popular user-made rap lyrics.
 
-          Posting available on RhymeDoctor.fun
-        </span>
-      </div>
-      <div className="rediditContainer">
-        <img src={redidit} alt="redidit"/>
-        <br/>
-        <span>
-          Redidit - Clone of Reddit
-        </span>
-      </div>
-      
-      
-      
-      
-      
+            Posting available on RhymeDoctor.fun
+          </span>
+        </div>
+        <div className="rediditContainer">
+          <img src={redidit} alt="redidit"/>
+          <br/>
+          <span>
+            Redidit - Clone of Reddit
+          </span>
+        </div>
       </div>
     )
   }

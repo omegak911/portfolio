@@ -47,7 +47,7 @@ export default class Tech extends Component {
     const { frontEnd, backEnd, deployment, devTools } = this.state;
 
     return (
-      <div className="techMain">
+      <div id="tech">
         <div className="techContainerTop">
           <div className="techContainerMiddle">
             <div className="category">FRONTEND</div>
