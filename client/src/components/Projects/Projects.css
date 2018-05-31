@@ -1,28 +1,21 @@
 #project {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
-.rediditContainer {
-  max-width: 800px;
+.allProjectContainer {
+  border: 1px solid black;
+  display: flex;
+  height: 50vh;
+  margin-left: 10%;
+  margin-right: 10%;
+  overflow: scroll;
 }
 
-.rhymeDrContainer {
-  max-width: 400px;
+.projectContainer {
+  height: 100%;
 }
 
-.rediditContainer,
-.rhymeDrContainer {
-  text-align: center;
-}
-
-.rediditContainer img {
-  transform: scale(0.9);
-  margin-bottom: -20px;
-}
-
-.rhymeDrContainer img {
-  transform: scale(0.8);
-  margin-top: -50px;
-  margin-bottom: -50px;
+.projectContainer img {
+  height: 90%;
 }
