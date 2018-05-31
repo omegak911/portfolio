@@ -1,9 +1,9 @@
-#project {
+#applications {
   display: flex;
   flex-direction: column;
 }
 
-.allProjectContainer {
+.allAppContainer {
   border: 1px solid black;
   display: flex;
   height: 50vh;
@@ -12,10 +12,10 @@
   overflow: scroll;
 }
 
-.projectContainer {
+.appContainer {
   height: 100%;
 }
 
-.projectContainer img {
+.appContainer img {
   height: 90%;
 }

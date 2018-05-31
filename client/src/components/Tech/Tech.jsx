@@ -26,8 +26,8 @@ export default class Tech extends Component {
         { tech: 'PostgreSQL', rating: 4 },
         { tech: 'MongoDB', rating: 4 },
         { tech: 'RESTful API', rating: 4 },
-        { tech: 'BCrypt', rating: 3 },
-        { tech: 'Passport', rating: 0 },
+        { tech: 'BCrypt', rating: 4 },
+        { tech: 'Passport.js', rating: 3 },
       ],
       deployment: [
         { tech: 'AWS', rating: 1 },

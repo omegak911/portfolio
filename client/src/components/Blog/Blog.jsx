@@ -11,7 +11,8 @@ class About extends Component {
     return (
       <div id="blog" className="topContainer">
         <h2>Blog</h2>
-        <div>About</div>
+        <div>About Me</div>
+        <div>Insert blogs with css different than Projects.  Maybe grid-areas inside a overscroll container with a max-height</div>
         
       </div>
     )
