@@ -39,9 +39,11 @@ class Applications extends Component {
         <div className="allAppContainer">
           {applications.map((app, index) =>
             <div key={index} className="appContainer">
-              <img src={app.image} alt="app image"/>
-              <div>{app.title}</div>
-              <div>{app.description}</div>
+              <div className="innerAppContainer">
+                <img src={app.image} alt="app image"/>
+                <div>{app.title}</div>
+                <div>{app.description}</div>
+              </div>
             </div>
           )}
         </div>
