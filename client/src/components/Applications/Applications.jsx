@@ -35,17 +35,21 @@ class Applications extends Component {
 
     return (
       <div id="applications" className="topContainer">
-        <h2>Applications</h2>
-        <div className="allAppContainer">
-          {applications.map((app, index) =>
-            <div key={index} className="appContainer">
-              <div className="innerAppContainer">
-                <img src={app.image} alt="app image"/>
-                <div>{app.title}</div>
-                <div>{app.description}</div>
-              </div>
+        <div className="midAppContainer">
+          <div>
+            <h2>Applications</h2>
+            <div className="allAppContainer">
+              {applications.map((app, index) =>
+                <div key={index} className="appContainer">
+                  <div className="innerAppContainer">
+                    <img src={app.image} alt="app image"/>
+                    <div>{app.title}</div>
+                    <div>{app.description}</div>
+                  </div>
+                </div>
+              )}
             </div>
-          )}
+          </div>
         </div>
       </div>
     )

@@ -26,5 +26,6 @@ html, body {
 }
 
 .topContainer {
+  background-color: rgba(225, 243, 243, 0.63);
   min-height: 100vh;
 }
