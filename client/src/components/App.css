@@ -14,6 +14,17 @@ html, body {
   height: 100%;
 }
 
+.transition {
+  opacity: 0;
+  transition: all 700ms ease-in-out;
+  visibility: hidden;
+}
+
+.transition.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
 .topContainer {
   min-height: 100vh;
 }

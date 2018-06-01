@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import OnVisible, { setDefaultProps } from 'react-on-visible';
 
 import Blog from './Blog/Blog';
 import Contact from './Contact/Contact';
@@ -8,6 +9,10 @@ import Applications from './Applications/Applications';
 import Tech from './Tech/Tech';
 
 import './App.css';
+
+setDefaultProps({
+  percent: 20,
+})
 
 class App extends Component {
   constructor(props) {
@@ -19,12 +24,19 @@ class App extends Component {
       <div>
         <Navbar />
         <Home />
-        <Applications />
-        <Tech />
-        <Blog />
-        <Contact />
+        <OnVisible className="transition">
+          <Applications />
+        </OnVisible>
+        <OnVisible className="transition">
+          <Tech />
+        </OnVisible>
+        <OnVisible className="transition">
+          <Blog />
+        </OnVisible>
+        <OnVisible className="transition">
+          <Contact />
+        </OnVisible>
       </div>
-
     )
   }
 }
