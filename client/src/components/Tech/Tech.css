@@ -5,31 +5,35 @@
   min-width: 250px;
 }
 
-.cover,
-.eachTech {
+.cover {
   border: 1px solid black;
 }
 
 .cover {
+  background-color: white;
   display: flex;
   flex-wrap: wrap;
   max-width: 130vh;
 }
 
 .eachTech {
-  height: 50px;
-  width: 200px;
+  padding-bottom: 5px;
+  width: 110px;
 }
 
-.innermostTechContainer {
-  margin-left: 5px;
+.midTechContainer {
+  align-items: center;
+  background-color: orange;
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  width: 80%;
 }
 
 .techType {
   align-items: center;
   border-bottom: 1px solid black;
   display: flex;
-  padding-bottom: 5px;
   padding-top: 5px;
   width: 100%;
 }
@@ -49,4 +53,39 @@
   display: flex;
   flex-wrap: wrap;
   margin-right: 5px;
+}
+
+#octagon {
+	background: red;
+  display: flex;
+  flex-direction: column;
+	height: 100px;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+	width: 100px;
+}
+
+#octagon:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-bottom: 29px solid red;
+	border-left: 29px solid red;
+	border-right: 29px solid white;
+	width: 42px;
+	height: 0;
+}
+
+#octagon:after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	border-top: 29px solid red;
+	border-left: 29px solid white;
+	border-right: 29px solid red;
+	width: 42px;
+	height: 0;
 }

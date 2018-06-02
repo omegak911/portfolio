@@ -60,8 +60,10 @@ export default class Tech extends Component {
                 {this.state[techType].map(tech => 
                   <div className="eachTech">
                     <div className="innermostTechContainer">
-                      {tech.tech}
-                      <Stars solidStars={tech.rating} />
+                      <div id="octagon">
+                        {tech.tech}
+                        <Stars solidStars={tech.rating} />
+                      </div>
                     </div>
                   </div>
                 )}
