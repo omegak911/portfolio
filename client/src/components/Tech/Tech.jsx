@@ -59,6 +59,10 @@ export default class Tech extends Component {
                 <div className="techStack">
                 {this.state[techType].map(tech => 
                   <div className="eachTech">
+                    <div className="innermostTechContainer">
+                      {tech.tech}
+                      <Stars solidStars={tech.rating} />
+                    </div>
                   </div>
                 )}
                 </div>
@@ -66,54 +70,6 @@ export default class Tech extends Component {
             )}
           </div>
         </div>
-
-
-        {/* <div className="techContainerTop">
-          <div className="techContainerMiddle">
-            <div className="category">FRONTEND</div>
-            {frontEnd.map((tech, index) => 
-              <div key={index} className="techContainerInner">
-                <div className="tech">
-                  {tech.tech}
-                  <Stars solidStars={tech.rating}/>
-                </div>
-              </div>
-            )}
-          </div>
-          <div className="techContainerMiddle">
-            <div className="category">BACKEND</div>
-            {backEnd.map((tech, index) =>
-              <div key={index+10} className="techContainerInner">
-                <div className="tech">
-                  {tech.tech}
-                  <Stars solidStars={tech.rating}/>
-                </div>
-              </div>
-            )}
-          </div>
-          <div className="techContainerMiddle">
-            <div className="category">DEPLOYMENT</div>
-            {deployment.map((tech, index) =>
-              <div key={index+20} className="techContainerInner">
-                <div className="tech">
-                  {tech.tech}
-                  <Stars solidStars={tech.rating}/>
-                </div>
-              </div>
-            )}
-          </div>
-          <div className="techContainerMiddle last">
-            <div className="category">DEVTOOLS</div>
-            {devTools.map((tech, index) =>
-              <div key={index+30} className="techContainerInner">
-                <div className="tech">
-                  {tech.tech}
-                  <Stars solidStars={tech.rating}/>
-                </div>
-              </div>
-            )}
-          </div>
-        </div> */}
       </div>
     )
   }
