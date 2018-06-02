@@ -8,7 +8,7 @@ export default class Tech extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      frontEnd: [
+      FrontEnd: [
         { tech: 'Javascript', rating: 5 },
         { tech: 'React', rating: 5 },
         { tech: 'Socket.IO', rating: 5 },
@@ -19,7 +19,7 @@ export default class Tech extends Component {
         { tech: 'jQuery', rating: 4 },
         { tech: 'React Native', rating: 3 },
       ],
-      backEnd: [
+      BackEnd: [
         { tech: 'Node.js', rating: 5 },
         { tech: 'Express', rating: 5 },
         { tech: 'MySQL', rating: 4 },
@@ -29,11 +29,11 @@ export default class Tech extends Component {
         { tech: 'BCrypt', rating: 4 },
         { tech: 'Passport.js', rating: 3 },
       ],
-      deployment: [
+      Deployment: [
         { tech: 'AWS', rating: 1 },
         { tech: 'Nginx', rating: 0 },
       ],
-      devTools: [
+      DevTools: [
         { tech: 'Git', rating: 4 },
         { tech: 'NPM', rating: 3 },
         { tech: 'Webpack', rating: 3 },
@@ -48,8 +48,27 @@ export default class Tech extends Component {
 
     return (
       <div id="tech" className="topContainer">
-        <h2>Tech Stack</h2>
-        <div className="techContainerTop">
+        <div className="midTechContainer">
+          <h2>Tech Stack</h2>
+          <div className="cover">
+            {Object.keys(this.state).map(techType =>
+              <div className="techType">
+                <div className="techTypeTitle">
+                  <h3>{techType}</h3>
+                </div>
+                <div className="techStack">
+                {this.state[techType].map(tech => 
+                  <div className="eachTech">
+                  </div>
+                )}
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+
+
+        {/* <div className="techContainerTop">
           <div className="techContainerMiddle">
             <div className="category">FRONTEND</div>
             {frontEnd.map((tech, index) => 
@@ -94,7 +113,7 @@ export default class Tech extends Component {
               </div>
             )}
           </div>
-        </div>
+        </div> */}
       </div>
     )
   }

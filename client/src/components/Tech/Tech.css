@@ -5,17 +5,42 @@
   min-width: 250px;
 }
 
-.techContainerMiddle {
-  margin-right: 30px;
+.cover,
+.eachTech {
   border: 1px solid black;
 }
 
-.techContainerMiddle.last {
-  margin-right: 0px;
+.cover {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 130vh;
 }
 
-.techContainerTop {
+.eachTech {
+  height: 50px;
+  width: 200px;
+}
+
+.techType {
+  border-bottom: 1px solid black;
+  display: flex;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  width: 100%;
+}
+
+.techTypeTitle {
+  align-items: center;
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  min-width: 110px;
+}
+
+.techType h3 {
+  margin-left: 1%;
+}
+
+.techStack {
+  display: flex;
+  flex-wrap: wrap;
 }
