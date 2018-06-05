@@ -1,19 +1,12 @@
-.tech {
-  border: 1px solid orange;
-  margin-bottom: 10px;
-  height: 50px;
-  min-width: 250px;
+.bracket {
+  font-size: 80px;
 }
 
 .cover {
-  border: 1px solid black;
-}
-
-.cover {
-  background-color: white;
+  background-color: rgb(233, 250, 250);
   display: flex;
   flex-wrap: wrap;
-  max-width: 130vh;
+  max-width: 100vh;
 }
 
 .eachTech {
@@ -23,16 +16,19 @@
 
 .midTechContainer {
   align-items: center;
-  background-color: orange;
   display: flex;
   flex-direction: column;
-  height: 70vh;
+  justify-content: center;
+  min-height: 90vh;
   width: 80%;
+}
+
+.midTechContainer h2 {
+  padding-top: 0;
 }
 
 .techType {
   align-items: center;
-  border-bottom: 1px solid black;
   display: flex;
   padding-top: 5px;
   width: 100%;
@@ -53,10 +49,12 @@
   display: flex;
   flex-wrap: wrap;
   margin-right: 5px;
+  width: 100%;
 }
 
 #octagon {
-	background: red;
+  background: red;
+  colro: white;
   display: flex;
   flex-direction: column;
 	height: 100px;
@@ -73,7 +71,7 @@
 	left: 0;
 	border-bottom: 29px solid red;
 	border-left: 29px solid red;
-	border-right: 29px solid white;
+	border-right: 29px solid rgb(233, 250, 250);;
 	width: 42px;
 	height: 0;
 }
@@ -84,7 +82,7 @@
 	bottom: 0;
 	left: 0;
 	border-top: 29px solid red;
-	border-left: 29px solid white;
+	border-left: 29px solid rgb(233, 250, 250);;
 	border-right: 29px solid red;
 	width: 42px;
 	height: 0;

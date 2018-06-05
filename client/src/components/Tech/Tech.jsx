@@ -49,27 +49,27 @@ export default class Tech extends Component {
     return (
       <div id="tech" className="topContainer">
         <div className="midTechContainer">
-          <h2>Tech Stack</h2>
-          <div className="cover">
-            {Object.keys(this.state).map(techType =>
-              <div className="techType">
-                <div className="techTypeTitle">
-                  <h3>{techType}</h3>
-                </div>
-                <div className="techStack">
-                {this.state[techType].map(tech => 
-                  <div className="eachTech">
-                    <div className="innermostTechContainer">
-                      <div id="octagon">
-                        {tech.tech}
-                        <Stars solidStars={tech.rating} />
-                      </div>
-                    </div>
+          <div>
+            <h2>Tech Stack</h2>
+            <div className="cover">
+              {Object.keys(this.state).map(techType =>
+                <div className="techType">
+                  <div className="techTypeTitle">
+                    <h3>{techType}</h3>
                   </div>
-                )}
+                  <div className="techStack">
+                  {this.state[techType].map(tech => 
+                    <div className="eachTech">
+                        <div id="octagon">
+                          {tech.tech}
+                          <Stars solidStars={tech.rating} />
+                        </div>
+                    </div>
+                  )}
+                  </div>
                 </div>
-              </div>
-            )}
+              )}
+            </div>
           </div>
         </div>
       </div>
