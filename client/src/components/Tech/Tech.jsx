@@ -10,44 +10,43 @@ export default class Tech extends Component {
     super(props);
     this.state = {
       FrontEnd: [
-        { tech: 'Javascript', rating: 5 },
-        { tech: 'React', rating: 5 },
-        { tech: 'Socket.IO', rating: 5 },
-        { tech: 'HTML5', rating: 5 },
-        { tech: 'CSS3', rating: 5 },
-        { tech: 'React Router', rating: 5 },
-        { tech: 'React Redux', rating: 4 },
-        { tech: 'jQuery', rating: 4 },
-        { tech: 'React Native', rating: 3 },
+        { tech: 'Javascript', solid: [1,2,3,4,5], empty: [] },
+        { tech: 'React', solid: [1,2,3,4,5], empty: [] },
+        { tech: 'Socket.IO', solid: [1,2,3,4,5], empty: [] },
+        { tech: 'HTML5', solid: [1,2,3,4,5], empty: [] },
+        { tech: 'CSS3', solid: [1,2,3,4,5], empty: [] },
+        { tech: 'React Router', solid: [1,2,3,4,5], empty: [] },
+        { tech: 'React Redux', solid: [1,2,3,4], empty: [5] },
+        { tech: 'jQuery', solid: [1,2,3,4], empty: [5] },
+        { tech: 'React Native', solid: [1,2,3], empty: [4,5] },
       ],
       BackEnd: [
-        { tech: 'Node.js', rating: 5 },
-        { tech: 'Express', rating: 5 },
-        { tech: 'MySQL', rating: 4 },
-        { tech: 'PostgreSQL', rating: 4 },
-        { tech: 'MongoDB', rating: 4 },
-        { tech: 'RESTful API', rating: 4 },
-        { tech: 'BCrypt', rating: 4 },
-        { tech: 'Passport.js', rating: 3 },
+        { tech: 'Node.js', solid: [1,2,3,4,5], empty: [] },
+        { tech: 'Express', solid: [1,2,3,4,5], empty: [] },
+        { tech: 'MySQL', solid: [1,2,3,4], empty: [5] },
+        { tech: 'PostgreSQL', solid: [1,2,3,4], empty: [5] },
+        { tech: 'MongoDB', solid: [1,2,3,4], empty: [5] },
+        { tech: 'RESTful API', solid: [1,2,3,4], empty: [5] },
+        { tech: 'BCrypt', solid: [1,2,3,4], empty: [5] },
+        { tech: 'Passport.js', solid: [1,2,3], empty: [4,5] },
       ],
       Deployment: [
-        { tech: 'AWS', rating: 1 },
-        { tech: 'Nginx', rating: 0 },
+        { tech: 'AWS', solid: [1], empty: [2,3,4,5] },
+        { tech: 'Nginx', solid: [],empty: [1,2,3,4,5] },
       ],
       DevTools: [
-        { tech: 'Git', rating: 4 },
-        { tech: 'NPM', rating: 3 },
-        { tech: 'Webpack', rating: 3 },
-        { tech: 'Babel', rating: 2 },
-        { tech: 'Yarn', rating: 2 },
+        { tech: 'Git', solid: [1,2,3,4], empty: [5] },
+        { tech: 'NPM', solid: [1,2,3], empty: [4,5] },
+        { tech: 'Webpack', solid: [1,2,3], empty: [4,5] },
+        { tech: 'Babel', solid: [1,2], empty: [3,4,5] },
+        { tech: 'Yarn', solid: [1,2], empty: [3,4,5] },
       ],
-      stuff:[]
     }
   }
 
-  stuff = () => {
-    this.setState({ stuff: [...this.state.stuff, 1]})
-  }
+  // stuff = () => {
+  //   this.setState({ stuff: [...this.state.stuff, 1]})
+  // }
 
   render() {
     const { frontEnd, backEnd, deployment, devTools } = this.state;
@@ -56,19 +55,24 @@ export default class Tech extends Component {
       <div id="tech" className="topContainer">
         <div className="midTechContainer">
           <div>
-            <button onClick={this.stuff}>******</button>
+            {/* <button onClick={this.stuff}>******</button>
             <ReactCSSTransitionGroup
-              transitionName="example"
-              transitionEnterTimeout={500}
-              transitionLeaveTimeout={300}>
+              transitionName="techAnimation"
+              transitionAppear={true}
+              transitionAppearTimeout={500}
+              transitionEnter={false}
+              transitionLeave={false}
+              // transitionEnterTimeout={500}
+              // transitionLeaveTimeout={300}
+              >
               {this.state.stuff.map((item, index) =>
                 <div key={index}>
                   {item}
                 </div>
               )}
-            </ReactCSSTransitionGroup>
+            </ReactCSSTransitionGroup> */}
             <h2>Tech Stack</h2>
-            {/* <div className="cover">
+            <div className="cover">
               {Object.keys(this.state).map((techType, index) =>
                 <div className="techType" key={index}>
                   <div className="techTypeTitle">
@@ -76,16 +80,18 @@ export default class Tech extends Component {
                   </div>
                   <div className="techStack">
                     <ReactCSSTransitionGroup
-                      component='div'
-                      transitionName="techAnimation"
-                      transitionEnter={true}
-                      transitionEnterTimeout={1000}
-                      transitionLeaveTimeout={500}>
+                          className="techAnimation"
+                         component='div'
+                          transitionName="techAnimation"
+                          transitionAppear={true}
+                          transitionAppearTimeout={1000}
+                          transitionEnter={false}
+                          transitionLeave={false}>
                       {this.state[techType].map((tech, index) =>
                           <div className="eachTech" key={index}>
                               <div id="octagon">
                                 {tech.tech}
-                                <Stars solidStars={tech.rating} />
+                                <Stars solidStars={tech.solid} emptyStars={tech.empty} />
                               </div>
                           </div>
                       )}
@@ -93,7 +99,7 @@ export default class Tech extends Component {
                   </div>
                 </div>
               )}
-            </div> */}
+            </div>
           </div>
         </div>
       </div>
