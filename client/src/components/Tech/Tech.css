@@ -1,7 +1,3 @@
-.bracket {
-  font-size: 80px;
-}
-
 .cover {
   background-color: rgb(233, 250, 250);
   display: flex;
@@ -25,6 +21,31 @@
 
 .midTechContainer h2 {
   padding-top: 0;
+}
+
+.techAnimation {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.techAnimation-enter {
+  opacity: 0;
+  transform: translate(-20px);
+}
+
+.techAnimation-enter.techAnimation-enter-active {
+  opacity: 1;
+  transform: translateX(0px);
+  transition: all 1s ease-out;
+}
+
+.techAnimation-leave {
+  opacity: 1;
+}
+
+.techAnimation-leave.techAnimation-leave-active {
+  opacity: 0;
+  transition: all 1s ease-in;
 }
 
 .techType {
@@ -86,4 +107,20 @@
 	border-right: 29px solid red;
 	width: 42px;
 	height: 0;
+}
+
+
+.techAnimation-enter {
+  transform: translate(100%);
+}
+.techAnimation-enter.techAnimation-enter-active {
+  transform: translate(0%);
+  transition: transform 1000ms ease-in-out;
+}
+.techAnimation-leave {
+  transform: translate(0%);
+}
+.techAnimation-leave.techAnimation-leave-active {
+  transform: translate(-100%);
+  transition: transform 1000ms ease-in-out;
 }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import Stars from './Stars';
 
@@ -40,7 +41,12 @@ export default class Tech extends Component {
         { tech: 'Babel', rating: 2 },
         { tech: 'Yarn', rating: 2 },
       ],
+      stuff:[]
     }
+  }
+
+  stuff = () => {
+    this.setState({ stuff: [...this.state.stuff, 1]})
   }
 
   render() {
@@ -50,26 +56,44 @@ export default class Tech extends Component {
       <div id="tech" className="topContainer">
         <div className="midTechContainer">
           <div>
+            <button onClick={this.stuff}>******</button>
+            <ReactCSSTransitionGroup
+              transitionName="example"
+              transitionEnterTimeout={500}
+              transitionLeaveTimeout={300}>
+              {this.state.stuff.map((item, index) =>
+                <div key={index}>
+                  {item}
+                </div>
+              )}
+            </ReactCSSTransitionGroup>
             <h2>Tech Stack</h2>
-            <div className="cover">
-              {Object.keys(this.state).map(techType =>
-                <div className="techType">
+            {/* <div className="cover">
+              {Object.keys(this.state).map((techType, index) =>
+                <div className="techType" key={index}>
                   <div className="techTypeTitle">
                     <h3>{techType}</h3>
                   </div>
                   <div className="techStack">
-                  {this.state[techType].map(tech => 
-                    <div className="eachTech">
-                        <div id="octagon">
-                          {tech.tech}
-                          <Stars solidStars={tech.rating} />
-                        </div>
-                    </div>
-                  )}
+                    <ReactCSSTransitionGroup
+                      component='div'
+                      transitionName="techAnimation"
+                      transitionEnter={true}
+                      transitionEnterTimeout={1000}
+                      transitionLeaveTimeout={500}>
+                      {this.state[techType].map((tech, index) =>
+                          <div className="eachTech" key={index}>
+                              <div id="octagon">
+                                {tech.tech}
+                                <Stars solidStars={tech.rating} />
+                              </div>
+                          </div>
+                      )}
+                    </ReactCSSTransitionGroup>
                   </div>
                 </div>
               )}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
