@@ -50,7 +50,7 @@
 
 #octagon {
   background: red;
-  colro: white;
+  color: white;
   display: flex;
   flex-direction: column;
 	height: 100px;
@@ -93,6 +93,14 @@
   transform: translate(1000px);
 }
 .techAnimation-appear.techAnimation-appear-active {
+  transform: translate(0%);
+  transition: transform 1s ease-in-out;
+}
+
+.techAnimation-enter {
+  transform: translate(1000px);
+}
+.techAnimation-enter.techAnimation-enter-active {
   transform: translate(0%);
   transition: transform 1s ease-in-out;
 }
