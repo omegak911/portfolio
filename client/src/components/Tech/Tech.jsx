@@ -52,29 +52,20 @@ class Tech extends Component {
 
   componentDidMount() {
     const { Storage } = this.state;
-    let delay1 = 0;
-    let delay2 = 0;
-    let delay3 = 0;
-    let delay4 = 0;
+    let delay = 0;
     
     for (let i = 0; i < 9; i++) {
-      setTimeout(() => this.setState({ FrontEnd: [...this.state.FrontEnd, Storage.FrontEnd[i]]}), delay1)
-      delay1 += 1000;
+      setTimeout(() => this.setState({ FrontEnd: [...this.state.FrontEnd, Storage.FrontEnd[i]]}), delay)
       if (i < 8) {
-        setTimeout(() => { this.setState({ BackEnd: [...this.state.BackEnd, Storage.BackEnd[i]]})
-      
-        console.log(this.state)
-      }, delay2)
-        delay2 += 1000;
+        setTimeout(() => this.setState({ BackEnd: [...this.state.BackEnd, Storage.BackEnd[i]]}), delay)
       }
       if (i < 2) {
-        setTimeout(() => this.setState({ Deployment: [...this.state.Deployment, Storage.Deployment[i]]}), delay3)
-        delay3 += 1000;
+        setTimeout(() => this.setState({ Deployment: [...this.state.Deployment, Storage.Deployment[i]]}), delay)
       }
       if (i < 5) {
-        setTimeout(() => this.setState({ DevTools: [...this.state.DevTools, Storage.DevTools[i]]}), delay4)
-        delay4 += 1000;
+        setTimeout(() => this.setState({ DevTools: [...this.state.DevTools, Storage.DevTools[i]]}), delay)
       }
+      delay += 1000;
     }
   }
 
@@ -99,9 +90,9 @@ class Tech extends Component {
                         component='div'
                         transitionName="techAnimation"
                         transitionAppear={true}
-                        transitionAppearTimeout={1000}
+                        transitionAppearTimeout={2000}
                         transitionEnter={true}
-                        transitionEnterTimeout={1000}
+                        transitionEnterTimeout={2000}
                         transitionLeave={false}>
                         {this.state[techType].map((tech, index) =>
                           <div className="eachTech" key={index}>

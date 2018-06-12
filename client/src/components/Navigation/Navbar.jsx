@@ -13,7 +13,7 @@ class Navbar extends Component {
         <a href="#home">Home</a>
         <a href="#applications">Applications</a>
         <a href="#tech">Tech</a>
-        <a href="#blog">Blog</a>
+        {/* <a href="#blog">Blog</a> */}
         <a href="#contact">Contact</a>
       </div>
     )

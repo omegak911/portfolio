@@ -12,6 +12,7 @@ import './App.css';
 
 setDefaultProps({
   percent: 20,
+  //run function to setState?
 })
 
 class App extends Component {
@@ -30,9 +31,9 @@ class App extends Component {
         <OnVisible className="transition">
           <Tech />
         </OnVisible>
-        <OnVisible className="transition">
+        {/* <OnVisible className="transition">
           <Blog />
-        </OnVisible>
+        </OnVisible> */}
         <OnVisible className="transition">
           <Contact />
         </OnVisible>
