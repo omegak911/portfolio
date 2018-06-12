@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import OnVisible, { setDefaultProps } from 'react-on-visible';
 
-import Blog from './Blog/Blog';
+// import Blog from './Blog/Blog';
 import Contact from './Contact/Contact';
 import Home from './Home/Home';
 import Navbar from './Navigation/Navbar';

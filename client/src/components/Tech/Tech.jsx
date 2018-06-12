@@ -31,10 +31,10 @@ class Tech extends Component {
           { tech: 'BCrypt', solid: [1,2,3,4], empty: [5] },
           { tech: 'Passport.js', solid: [1,2,3], empty: [4,5] },
         ],
-        Deployment: [
-          { tech: 'AWS', solid: [1], empty: [2,3,4,5] },
-          { tech: 'Nginx', solid: [],empty: [1,2,3,4,5] },
-        ],
+        // Deployment: [
+        //   { tech: 'AWS', solid: [1], empty: [2,3,4,5] },
+        //   { tech: 'Nginx', solid: [],empty: [1,2,3,4,5] },
+        // ],
         DevTools: [
           { tech: 'Git', solid: [1,2,3,4], empty: [5] },
           { tech: 'NPM', solid: [1,2,3], empty: [4,5] },
@@ -45,7 +45,7 @@ class Tech extends Component {
       },
       FrontEnd: [],
       BackEnd: [],
-      Deployment: [],
+      // Deployment: [],
       DevTools: [],
     }
   }
@@ -59,18 +59,19 @@ class Tech extends Component {
       if (i < 8) {
         setTimeout(() => this.setState({ BackEnd: [...this.state.BackEnd, Storage.BackEnd[i]]}), delay)
       }
-      if (i < 2) {
-        setTimeout(() => this.setState({ Deployment: [...this.state.Deployment, Storage.Deployment[i]]}), delay)
-      }
+      // if (i < 2) {
+      //   setTimeout(() => this.setState({ Deployment: [...this.state.Deployment, Storage.Deployment[i]]}), delay)
+      // }
       if (i < 5) {
         setTimeout(() => this.setState({ DevTools: [...this.state.DevTools, Storage.DevTools[i]]}), delay)
       }
-      delay += 1000;
+      delay += 500;
     }
   }
 
   render() {
-    const { FrontEnd, BackEnd, Deployment, DevTools } = this.state;
+    const { FrontEnd, BackEnd, DevTools } = this.state;
+    // const { Deployment } = this.state;
 
     return (
       <div id="tech" className="topContainer">
