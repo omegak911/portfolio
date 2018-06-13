@@ -74,7 +74,6 @@ class Tech extends Component {
     // const { Deployment } = this.state;
 
     return (
-      <div id="tech" className="topContainer">
         <div className="midTechContainer">
           <div>
             <h2>Tech Stack</h2>
@@ -111,7 +110,6 @@ class Tech extends Component {
             </div>
           </div>
         </div>
-      </div>
     )
   }
 

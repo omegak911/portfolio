@@ -10,17 +10,31 @@ import Tech from './Tech/Tech';
 
 import './App.css';
 
-setDefaultProps({
-  percent: 20,
-  //run function to setState?
-})
-
 class App extends Component {
   constructor(props) {
     super(props)
+    this.state = {
+      showApp: false,
+      showTech: false,
+    }
+  }
+
+  componentWillMount() {
+    setDefaultProps({
+      percent: 20,
+      onChange: (visible) => {
+        if (!this.state.showApp) {
+          this.setState({ showApp: true });
+        } else {
+          this.setState({ showTech: true });
+        }
+      }
+    })
   }
 
   render() {
+    let { showTech } = this.state;
+
     return (
       <div>
         <Navbar />
@@ -29,7 +43,9 @@ class App extends Component {
           <Applications />
         </OnVisible>
         <OnVisible className="transition">
-          <Tech />
+          <div id="tech" className="topContainer">
+            {showTech && <Tech />}
+          </div>
         </OnVisible>
         {/* <OnVisible className="transition">
           <Blog />
